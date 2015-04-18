@@ -1,0 +1,21 @@
+{
+  "name": "pandemic_watch",
+  "version": "0.0.1",
+  "description": "An app using twitter api combined with twilio to give you updates on how tiwtter users are reacting to local infectious diseases.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "health",
+    "disease",
+    "tweets",
+    "pandemic"
+  ],
+  "author": "Brandon, Dau, John, Mike - hackRU2015",
+  "license": "BSD",
+  "dependencies": {
+    "express": "^4.12.3",
+    "mongodb": "^2.0.27"
+  }
+}
