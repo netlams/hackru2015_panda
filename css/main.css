@@ -216,11 +216,28 @@ h1 {
     color: white;
     font-size: 5em;
     margin-top: 2em;
-    margin-bottom: 0.67em;
+    margin-bottom: 0;
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
         
+}
+
+p.tada {
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px black;
+    color: white;
+    font-weight: lighter;
+    font-size: 1em;
+    margin-top: -1px;
+    margin-bottom: 3em;
+    margin-left: 27em;
+    margin-right: 0;
+    -vendor-animation-duration: 5s;
+    -vendor-animation-delay: 4s;
+    -vendor-animation-iteration-count: infinite;
+
+
 }
 
 #main-heading {

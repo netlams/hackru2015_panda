@@ -18,6 +18,7 @@
     <body>
         <div id="main-container">
             <a id="main-heading" href="index.html"> <h1 class="animated bounceInDown">Pandemic Watch</h1></a>
+            <p class="animated tada">by Thunder Pigs</p>
             <div id="main-content">
                <form name="submission" action="/" method="post">
                 <input class="animated fadeIn" type="text" id="searchTerm" name="search" placeholder="Search Tweets!" />
@@ -26,6 +27,7 @@
  -->            <input type="hidden" name="lat" value="javascript:generateLat()" />
                 <input type="hidden" name="long" value="javascript:generateLong()" />
                 <input id="submitButton" class="animated fadeIn" type="submit" value="Submit" />
+
                 </form> 
             </div>
             <div id="map-canvas"></div>
@@ -44,6 +46,7 @@
         <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&signed_in=true"></script>
 
         <script src="js/main.js"></script>
+        <script type="text/javascript">document.getElementById('searchTerm').focus()</script>
 
         <!-- handlebars js -->
         <script type="text/javascript" src="js/handlebars_v3.0.1.js"></script>
