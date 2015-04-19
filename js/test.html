@@ -12,6 +12,7 @@
 				geocoder = new google.maps.Geocoder();
 				var lat;
 				var lon;
+				var d = new Date();
 
 				geocoder.geocode( { address: loc}, function(results, status) {
 					if(status === google.maps.GeocoderStatus.OK) {
@@ -21,18 +22,32 @@
 						var url = "https://api.twitter.com/1.1/search/tweets.json?q=%" + die + "&geo=" + lat + "," + lon + "2mi" + "&count=10";
 						var tw_ids = [];
 
-						$.getJSON({
+						//object used for GET request
+						var tweet_request = new XMLHttpRequest();
+						//open the request for GET
+						tweet_request.open("GET", url);
+						//set the header with the twitter OAuth
+						//https://dev.twitter.com/oauth/overview/authorizing-requests
+						tweet_request.setRequestHeader(
+							"Authorization",
+							{
+								oauth_consumer_key: "FAmfLdDQXRNpXwCyNz73O3C0X",
+								oauth_nonce: 
+							}
+						)
+
+						/*$.getJSON({
 								url,
 								crossDomain: true,
 								function(tweets_json){
 									var tweets = JSON.parse(tweets_json);
 									for(obj in tweets.statuses){
 									tw_ids.push(tweets.statuses[obj].id_str);
+									console.log(tw_ids);
 								}
 							}
-						});
+						});*/
 
-						console.log(tw_ids);
 
 					} else {
 						alert("DANGER DANGER ERROR ERROR");
