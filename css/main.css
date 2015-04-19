@@ -177,6 +177,10 @@ body {
     background-color: #365E7C;
 }
 
+#map-canvas {
+    display: none;
+}
+
 #footer {
     
      position: fixed;

@@ -22,7 +22,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 function generateLocation() {
 	var address = document.getElementById('searchLocation').value;
 	if (address.length == 0 || address == null) {
-		alert("need to input location");
+		alert("Missing location.");
 		return false;
 	}
 	else {

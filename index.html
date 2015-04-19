@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Pandemic</title>
+        <title>Pandemic Watch</title>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,17 +12,17 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="css/animate.min.css">
-        <link href='//fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,100,400italic,700italic,700' rel='stylesheet' type='text/css'>
     </head>
 
     <body>
         <div id="main-container">
-            <h1 class="animated bounceInDown">Pandemic Watch</h1>
+            <a id="main-heading" href="index.html"> <h1 class="animated bounceInDown">Pandemic Watch</h1></a>
             <div id="main-content">
                
-                <input class="animated fadeIn" type="text" name="searchTerm" placeholder="Search Tweets!" />
-                <input class="animated fadeIn" type="text" name="searchLatitude" placeholder="Type Address" />
-                <button class="animated fadeIn" onclick="javascript:generateLocation()">submit</button> <!-- need implementation -->
+                <input class="animated fadeIn" type="text" id="searchTerm" placeholder="Search Tweets!" />
+                <input class="animated fadeIn" type="text" id="searchLocation" placeholder="Type Address" />
+                <button class="animated fadeIn" onclick="javascript:generateResults()">submit</button> 
             </div>
             <div id="map-canvas"></div>
 
@@ -35,24 +35,11 @@
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <!-- jQuery -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <!-- Google Maps -->
-        <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD_mCSJ1FdbeNstkw6nPoHp5RIJFgOpCGw"></script>
-        <script src="js/main.js"></script>
         
-        <script type="text/javascript">
-            var glat = 54.733;
-            var glng = -2.9302;
+        <!-- Google API -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
-            function initialize() {
-              var mapOptions = {
-                center: { lat: glat, lng: glng},
-                zoom: 8
-              };
-              var map = new google.maps.Map(document.getElementById('map-canvas'),
-                  mapOptions);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
+        <script src="js/main.js"></script>
 
         <!-- handlebars js -->
         <script type="text/javascript" src="js/handlebars_v3.0.1.js"></script>

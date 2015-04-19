@@ -1,7 +1,8 @@
 function generateResults() { 
 	var query = document.getElementById('searchTerm').value;
 	if (generateLocation() == false || query.length == 0 ) {
-		alert("need to input search");
+		alert("Missing search query.");
+		return false;
 	}
 	else {
 	$('#map-canvas').css('display', 'block');
