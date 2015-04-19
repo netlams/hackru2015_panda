@@ -17,6 +17,7 @@
   "dependencies": {
     "express": "^4.12.3",
     "express-session": "^1.11.1",
-    "mongodb": "^2.0.27"
+    "mongodb": "^2.0.27",
+    "twit": "^1.1.20"
   }
 }
