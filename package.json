@@ -15,6 +15,7 @@
   "author": "Brandon, Dau, John, Mike - hackRU2015",
   "license": "BSD",
   "dependencies": {
+    "body-parser": "^1.12.3",
     "express": "^4.12.3",
     "express-session": "^1.11.1",
     "mongodb": "^2.0.27",
