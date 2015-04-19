@@ -118,7 +118,7 @@ button {
     border-radius: 3px;
     font-size:15px;
     text-align: center;
-    font-family:"arial";
+    font-family: 'Roboto', sans-serif;
     text-decoration:none; 
     display:inline-block;
     text-shadow: 2px 2px 0 rgba(0,0,0,0.3);
@@ -146,6 +146,11 @@ button:hover{
     filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr=#6EBFFC, endColorstr=#94B2C9);
 }
 
+button:active {
+    background: #71BCFC;
+    border:1px solid #6F787C;
+}
+
 input{
     vertical-align: top;
     display:inline-block; 
@@ -169,7 +174,11 @@ h1 {
     margin-left: 0;
     margin-right: 0;
     font-weight: lighter;
-    
+        
+}
+
+#main-heading {
+    text-decoration: none;
 }
 
 
@@ -182,16 +191,19 @@ body {
 }
 
 #footer {
-    
-     position: fixed;
-     bottom: 0;
-     right: 20px;
-     text-align: left;
-     font-size: 10px;
-     color: white;
+    font-family: "arial", sans-serif;
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    text-align: left;
+    font-size: 10px;
+    color: white;
 
 }
 
+#map-canvas {
+
+}
 
 
 
