@@ -11,3 +11,7 @@ function get() {
 	alert(me);
 
 }
+
+function get_tweets(die, loc, count){
+	
+}
