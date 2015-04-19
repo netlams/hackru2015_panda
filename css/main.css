@@ -1,3 +1,14 @@
+/*! HTML5 Boilerplate v5.1.0 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
 
 html {
     color: #222;
@@ -86,8 +97,13 @@ textarea {
 
 #main-container {
 
-    margin: 0 auto; padding-top: 50px;
-    width: 500px;
+    margin-bottom: auto;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: center;
+    text-align: center;
+
 
 }
 
@@ -143,24 +159,33 @@ input{
 }
 
 h1 {
-    display:block;
-    font-family: "arial";
-    text-shadow: 2px 2px black;
+    
+    font-family: 'Roboto', sans-serif;
+    text-shadow: 1px 1px black;
     color: white;
-    font-size: 2em;
+    font-size: 5em;
     margin-top: 2em;
     margin-bottom: 0.67em;
     margin-left: 0;
     margin-right: 0;
-    font-weight: bold;
+    font-weight: lighter;
+    
 }
+
 
 body {
     background-color: #365E7C;
 }
 
-#map-canvas {
-    display: none;
+#footer {
+    
+     position: fixed;
+     bottom: 0;
+     right: 20px;
+     text-align: left;
+     font-size: 10px;
+     color: white;
+
 }
 
 
@@ -341,4 +366,3 @@ body {
         page-break-after: avoid;
     }
 }
-
