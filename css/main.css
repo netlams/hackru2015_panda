@@ -159,7 +159,9 @@ body {
     background-color: #365E7C;
 }
 
-
+#map-canvas {
+    display: none;
+}
 
 
 
@@ -339,3 +341,4 @@ body {
         page-break-after: avoid;
     }
 }
+

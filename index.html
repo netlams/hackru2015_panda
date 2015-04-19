@@ -12,10 +12,10 @@
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
         <style>
-        #map-canvas {
-            display: none;
-        }
+        
         </style>
+
+        
     </head>
     <body>
         <div id="main-container">
@@ -25,10 +25,7 @@
                 <input type="text" id="searchTerm" placeholder="type your search" />
                 <button onclick="javascript:generateResults()">submit</button>
                 <div id="locate-it">Location</div>
-
                 <input type="text" id="searchLocation" placeholder="type your location" />
-                <!-- <button onclick="javascript:generateLocation()">submit</button> --> <!-- need implementation -->
-
             </div>
             <div id="map-canvas"></div>
 
@@ -36,11 +33,15 @@
                 <p>&copy; Copyright 2015 | HackRU</p>
             </div>
         </div>
+    </body>
 
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
         <!-- jQuery -->
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
-        <!-- Google Maps -->
+
+        <!-- Google API -->
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
         <script src="js/main.js"></script>
         
         <!-- handlebars js -->
@@ -57,5 +58,5 @@
 
         <!-- RENDER TEMPLATE AFTER EVERYTHING ELSE LOADED -->
         <script src="js/materials.js"></script>
-    </body>
+
 </html>
