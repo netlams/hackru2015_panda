@@ -1,4 +1,11 @@
 function generateResults() { 
+	var query = document.getElementById('searchTerm').value;
+	if (generateLocation() == false || query.length == 0 ) {
+		alert("need to input search");
+	}
+	else {
+	$('#map-canvas').css('display', 'block');
+
 	// sets variable source to the animalTemplate id in index.html
 	var source = document.getElementById("resultsTemplate").innerHTML;
 	 
@@ -17,4 +24,6 @@ function generateResults() {
 	 
 	// HTML element with id "animalList" is set to the output above
 	document.getElementById("main-content").innerHTML = output;
+	}
+
 };

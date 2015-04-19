@@ -11,6 +11,11 @@
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <style>
+        #map-canvas {
+            display: none;
+        }
+        </style>
     </head>
     <body>
         <div id="main-container">
@@ -22,7 +27,7 @@
                 <div>Location</div>
 
                 <input type="text" id="searchLocation" placeholder="type your location" />
-                <button onclick="javascript:generateLocation()">submit</button> <!-- need implementation -->
+                <!-- <button onclick="javascript:generateLocation()">submit</button> --> <!-- need implementation -->
 
             </div>
             <div id="map-canvas"></div>
