@@ -92,11 +92,12 @@ function generateLat() {
     var address = document.getElementById("my-address").value;
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-      	return results[0].geometry.location.lat();
+      	var temp1 = document.getElementById("lat");
+      	temp1.value = results[0].geometry.location.lat();
       }
 
       else {
-      	return;
+      	;
       }
     });
 }
@@ -106,11 +107,12 @@ function generateLong() {
     var address = document.getElementById("my-address").value;
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-      	return results[0].geometry.location.lng();
+      	var temp2 = document.getElementById("long");
+      	 temp2.value =  results[0].geometry.location.lng();
       }
 
       else {
-      	return;
+      	;
       }
     });
 }

@@ -23,8 +23,12 @@
                 <input class="animated fadeIn" type="text" id="searchTerm" name="search" placeholder="Search Tweets!" />
                 <input class="animated fadeIn" type="text" id="searchLocation" name="loc" placeholder="Type Address" />
                 <!-- <button class="animated fadeIn" onclick="javascript:generateResults()">submit</button>
- -->            <input type="hidden" name="lat" value="javascript:generateLat()" />
-                <input type="hidden" name="long" value="javascript:generateLong()" />
+ -->            <input type="hidden" id="lat" name="lat" value="" />
+                <input type="hidden" id="long" name="long" value="" />
+                <script type="text/javascript">
+generateLat();
+generateLong();
+                </script>
                 <input id="submitButton" class="animated fadeIn" type="submit" value="Submit" />
                 </form> 
             </div>
