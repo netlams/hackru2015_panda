@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<head>
+	<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+	<h1>Hey</h1>
+	<button onclick="javascript:get_tweets('flu', '1600 N Broad St')">hit it!</button>
+	<script>
+			function get_tweets(die, loc){
+				console.log("why")
+				geocoder = new google.maps.Geocoder();
+				var lat;
+				var lon;
+
+				geocoder.geocode( { address: loc}, function(results, status) {
+					if(status === google.maps.GeocoderStatus.OK) {
+						lat = results[0].geometry.location.lat();
+						lon = results[0].geometry.location.lng();
+
+						var url = "https://api.twitter.com/1.1/search/tweets.json?q=%" + die + "&geo=" + lat + "," + lon + "2mi" + "&count=10";
+						var tw_ids = [];
+
+						$.getJSON({
+								url,
+								crossDomain: true,
+								function(tweets_json){
+									var tweets = JSON.parse(tweets_json);
+									for(obj in tweets.statuses){
+									tw_ids.push(tweets.statuses[obj].id_str);
+								}
+							}
+						});
+
+						console.log(tw_ids);
+
+					} else {
+						alert("DANGER DANGER ERROR ERROR");
+					}
+				});
+			};
+	</script>
+</body>
+</html>
