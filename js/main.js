@@ -89,34 +89,70 @@ function generateLocation() {
 
 function generateLat() {
     geocoder = new google.maps.Geocoder();
-    var address = document.getElementById("my-address").value;
+    var address = document.getElementById("searchLocation").value;
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-      	var temp1 = document.getElementById("lat");
-      	temp1.value = results[0].geometry.location.lat();
+      	// alert("Latitude: " +   results[0].geometry.location.lat());
       }
 
       else {
-      	;
+      	return 2;
       }
     });
 }
 
-function generateLong() {
+function generateLng() {
     geocoder = new google.maps.Geocoder();
-    var address = document.getElementById("my-address").value;
+    var address = document.getElementById("searchLocation").value;
     geocoder.geocode( { 'address': address}, function(results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-      	var temp2 = document.getElementById("long");
-      	 temp2.value =  results[0].geometry.location.lng();
+      	// alert("Latitude: " + results[0].geometry.location.lng());
       }
 
       else {
-      	;
+      	return 2;
       }
     });
 }
 
+function codeAddress() {
+    geocoder = new google.maps.Geocoder();
+    var address = document.getElementById("searchLocation").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+
+      alert("Latitude: "+results[0].geometry.location.lat());
+      alert("Longitude: "+results[0].geometry.location.lng());
+      }
+ 
+      else {
+        alert("Geocode was not successful for the following reason: " + status);
+      }
+    });
+  }
+
+function execute(callit) {
+	
+	
+	// document.getElementById("long-i").value = 5;
+	// document.getElementById("lat-i").value =2;
+	// document.submission.lat.value = generateLat();
+	// document.submission.lng.value = generateLng();
+	// var temp1 = generateLng();
+	// var temp2 = generateLat();
+
+	// alert(temp1 + " : " + temp2);
+	alert("help?");
+	var temp = document.getElementById('searchLocation').value;
+	alert(temp);
+      // document.getElementById('lat').value = results[0].geometry.location.lng();
+      // document.getElementById('lng').value = results[0].geometry.location.lng();
+
+	codeAddress();
+	callit();
+	 // return true;
+	// document.getElementById('submission').submit();
+}
 // function get_tweets(dies, loc){
 
 // 	geocoder = new google.maps.Geocoder();

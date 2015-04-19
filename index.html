@@ -19,15 +19,14 @@
         <div id="main-container">
             <a id="main-heading" href="index.html"> <h1 class="animated bounceInDown">Pandemic Watch</h1></a>
             <div id="main-content">
-               <form name="submission" action="/" method="post">
+               <form id="submission" name="submission" action="/" method="post" onSubmit="javascript:execute(function(){return true;});">
                 <input class="animated fadeIn" type="text" id="searchTerm" name="search" placeholder="Search Tweets!" />
                 <input class="animated fadeIn" type="text" id="searchLocation" name="loc" placeholder="Type Address" />
                 <!-- <button class="animated fadeIn" onclick="javascript:generateResults()">submit</button>
- -->            <input type="hidden" id="lat" name="lat" value="" />
-                <input type="hidden" id="long" name="long" value="" />
+ -->            <input type="input" id="lat" name="lat" value="0" />
+                <input type="input" id="lng" name="lng" value="0" />
                 <script type="text/javascript">
-generateLat();
-generateLong();
+
                 </script>
                 <input id="submitButton" class="animated fadeIn" type="submit" value="Submit" />
                 </form> 
@@ -45,7 +44,7 @@ generateLong();
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
         
         <!-- Google API -->
-        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places&signed_in=true"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
 
         <script src="js/main.js"></script>
 
