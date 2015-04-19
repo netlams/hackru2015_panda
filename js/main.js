@@ -23,7 +23,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
 function geoLocate() {
 	var map;
 
-	function initializeMap() {
+	function initialize() {
 	  var mapOptions = {
 	    zoom: 6
 	  };
@@ -69,7 +69,7 @@ function geoLocate() {
 	  map.setCenter(options.position);
 	}
 
-	google.maps.event.addDomListener(window, 'load', initializeMap);
+	google.maps.event.addDomListener(window, 'load', initialize);
 }
 
 function generateLocation() {
@@ -86,6 +86,34 @@ function generateLocation() {
 	}
 }
 
+
+function generateLat() {
+    geocoder = new google.maps.Geocoder();
+    var address = document.getElementById("my-address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+      	return results[0].geometry.location.lat();
+      }
+
+      else {
+      	return;
+      }
+    });
+}
+
+function generateLong() {
+    geocoder = new google.maps.Geocoder();
+    var address = document.getElementById("my-address").value;
+    geocoder.geocode( { 'address': address}, function(results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+      	return results[0].geometry.location.lng();
+      }
+
+      else {
+      	return;
+      }
+    });
+}
 
 // function get_tweets(dies, loc){
 
